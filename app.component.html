@@ -1,0 +1,20 @@
+<h1>User Form</h1>
+<form [formGroup]="userForm" (ngSubmit)="submitForm()">
+
+  <label>Name</label>
+  <input type="text" formControlName="Name">
+  <label>age</label>
+  <input type="text" formControlName="age">
+  <label>email</label>
+  <input type="text" formControlName="email">
+  <input type="submit" value="Submit">
+
+  <ul>
+    <li *ngFor="let user of userList">
+      {{user.name}} 
+      <img [src]='user.avatar'/>
+
+    </li>
+  </ul>
+  
+</form>
